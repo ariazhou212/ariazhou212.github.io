@@ -1,19 +1,22 @@
-//change sections
-$('#about').click(function(){
-      // $('#project-page').animate({padding:'35rem 0'},100);
-  $('#about-page').fadeIn(800);
-  $('#about').addClass('selected2');
-  $('#projects').removeClass('selected');
-  $('#projects').css('right','18vw');
-  $('#project-page').fadeOut(400);
+$('#projects').mouseover(function(){
+  $('#project-page').addClass('fadeout');
+  $('#about-page').addClass('fadeout');
+  $('#filter').css('display','block');
 })
-$('#projects').click(function(){
-      // $('#project-page').animate({padding:'10vw 0'},100);
-  $('#project-page').fadeIn(800);
-  $('#about').removeClass('selected2');
-  $('#projects').addClass('selected');
-  $('#projects').css('right','11vw');
-  $('#about-page').fadeOut(400);
+$('#projects').mouseout(function(){
+  $('#project-page').removeClass('fadeout');
+  $('#about-page').removeClass('fadeout');
+  $('#filter').css('display','none');
+})
+$('#about').mouseover(function(){
+  $('#project-page').addClass('fadeout');
+  $('#about-page').addClass('fadeout');
+  $('#filter2').css('display','block');
+})
+$('#about').mouseout(function(){
+  $('#project-page').removeClass('fadeout');
+  $('#about-page').removeClass('fadeout');
+  $('#filter2').css('display','none');
 })
 
 //change font of title

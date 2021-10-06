@@ -1,0 +1,222 @@
+html {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #4f3c36;
+  /* font-family: garamond; */
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+  color: #e9e1cd;
+}
+@font-face {
+  font-family: "silkscreennormal";
+  src: url("slkscr-webfont.eot");
+  src: url("slkscr-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../slkscr-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+#my-logo {
+  width: 4vw;
+  min-width: 60px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header {
+  width: 90vw;
+  height: 6vw;
+  min-height: 50px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 2vw 1vw;
+}
+header p {
+  position: absolute;
+  cursor: pointer;
+  margin: auto;
+  color: #e9e1cd;
+  font-size: 1.7vw;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#about {
+  right: 1vw;
+}
+#projects {
+  right: 12vw;
+}
+.menu-option:hover {
+  color: #d47151;
+  font-size: 2vw;
+  font-family: silkscreennormal;
+}
+.selected {
+  color: #d47151;
+  font-size: 2vw;
+  font-family: silkscreennormal;
+}
+.selected::after {
+  display: inline-block;
+  content: "";
+  border-top: 0.2vw solid #d47151;
+  width: 5vw;
+  margin: 0;
+  transform: translateY(-2vw) translateX(-11vw);
+}
+.selected2 {
+  color: #d47151;
+  font-size: 2vw;
+  font-family: silkscreennormal;
+  transform: translateY(-50%) translateX(5vw);
+}
+.selected2::after {
+  display: inline-block;
+  content: "";
+  border-top: 0.2vw solid #d47151;
+  width: 3vw;
+  margin: 0;
+  transform: translateY(-2vw) translateX(-6.7vw);
+}
+.filter {
+  position: fixed;
+  display: none;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  color: #e9e1cd;
+}
+.filter h1 {
+  text-align: center;
+  font-size: 8vw;
+  margin: auto;
+}
+.filter p {
+  text-align: center;
+  font-size: 2vw;
+  padding-top: 3vw;
+  margin: auto;
+}
+
+section {
+  padding-top: 10vw;
+}
+#intro {
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  width: 90vw;
+  font-size: 2vw;
+  text-align: center;
+  color: #e9e1cd;
+}
+#intro h1 {
+  font-size: 9vw;
+  font-family: silkscreennormal;
+  cursor: pointer;
+  font-weight: normal;
+  line-height: 0%;
+  color: #d47151;
+}
+#projects-container {
+  padding-top: 15vw;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* gap: 5vw; */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#projects-container p {
+  color: #e9e1cd;
+  width: 70vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2vw;
+}
+#projects-container a {
+  font-size: 3vw;
+  color: #e9e1cd;
+}
+#projects-container a:hover {
+  color: #d47151;
+}
+iframe {
+  width: 80vw;
+  height: 45vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+hr {
+  width: 90vw;
+  margin-top: 15vw;
+  height: 1vw;
+  border: none;
+  border-top: 0.1rem solid #d47151;
+}
+.fadeout {
+  filter: opacity(50%) blur(5px);
+}
+#links {
+  height: 5vw;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  color: #e9e1cd;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 10vw;
+}
+footer {
+  background-color: #e9e1cd;
+  margin: auto;
+  color: #4f3c36;
+  margin-top: 10vw;
+  font-size: 0.9rem;
+  position: relative;
+  line-height: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  text-align: center;
+  padding: 5vw 0 7vw 0;
+}
+footer p a {
+  color: #4f3c36;
+}
+footer p a:hover {
+  color: #d47151;
+}
+#copyright {
+  line-height: normal;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* #placeholder {
+  height: 10vw;
+} */
