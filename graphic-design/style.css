@@ -199,6 +199,9 @@ hr {
   transform: translateX(-50%);
   padding-top: 10vw;
 }
+#links a:hover {
+  color: #d47151;
+}
 .album {
   width: 28vw;
   left: 0;

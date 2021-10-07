@@ -175,6 +175,9 @@ iframe {
   transform: translateX(-50%);
   padding-top: 10vw;
 }
+#links a:hover {
+  color: #d47151;
+}
 footer {
   background-color: #e9e1cd;
   margin: auto;
