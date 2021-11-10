@@ -23,6 +23,9 @@ header {
 .purple {
   color: #8667ff;
 }
+.dc-black {
+  color: #202225;
+}
 .fin-black {
   color: #595959;
 }
@@ -148,7 +151,7 @@ hr {
 .button h6 {
   font-weight: normal;
   padding: 14px 25px;
-  border: 2px solid #303030;
+  border: 2px solid #202225;
   font-size: 1.5rem;
 }
 .challenge {
@@ -165,7 +168,9 @@ hr {
   width: 402px;
   transform: translateY(-30px);
 }
-
+#discord p {
+  color: #202225;
+}
 #cover-discord {
   grid-row-start: 6;
   grid-column: 2 / 12;
@@ -327,4 +332,7 @@ ul li {
   column-gap: 195px;
   row-gap: 140px;
   transform: translate(6px, 2px);
+}
+#loc-number p {
+  color: #f0f0f0;
 }
