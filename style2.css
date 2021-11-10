@@ -21,6 +21,18 @@ header {
   height: 650px;
   width: 100%;
 }
+.purple {
+  color: #8667ff;
+}
+.fin-black {
+  color: #595959;
+}
+.fin-blue {
+  color: #2285c8;
+}
+.fin-green {
+  color: #69ccc0;
+}
 #background-header {
   background-color: #303030;
   height: 100px;
@@ -94,7 +106,7 @@ hr {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(100, 90px);
+  grid-template-rows: repeat(91, 90px);
   margin-top: 116px;
   column-gap: 14px;
   row-gap: 14px;
@@ -112,14 +124,12 @@ hr {
   grid-column: 2 / 13;
   grid-row: 2 /3;
   line-height: 70%;
-  color: #8667ff;
   font-size: 3.5rem;
 }
 .project-container h3 {
   grid-column: 8 / 13;
   grid-row: 1 /2;
   font-family: "Times New Roman", Times, serif;
-  color: #8667ff;
   font-weight: normal;
   font-size: 3.5rem;
 }
@@ -273,20 +283,20 @@ ul li {
 }
 .discord-dr {
   width: 610px;
-  grid-row: 59 / 64;
+  grid-row: 52 / 57;
 }
 #frame-con {
   grid-column: 2 / 12;
-  grid-row: 86 / 92;
+  grid-row: 79 / 87;
 }
 .loc-container {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   grid-column: 4 / 10;
-  grid-row: 80 / 83;
+  grid-row: 73 / 76;
   column-gap: 178px;
-  row-gap: 150px;
+  row-gap: 130px;
 }
 .loc-container img {
   width: 30px;
@@ -294,11 +304,11 @@ ul li {
 #des-container {
   transform: translate(45px, 0px);
   grid-column: 4 / 10;
-  grid-row: 80 / 85;
+  grid-row: 73 / 77;
   font-size: 0.8em;
   display: grid;
   grid-template-columns: 160px 160px 160px;
-  grid-template-rows: 180px 180px 180px;
+  grid-template-rows: 160px 160px 160px;
   column-gap: 48px;
   row-gap: 7px;
 }
@@ -314,6 +324,6 @@ ul li {
   color: #f0f0f0;
   font-weight: bold;
   column-gap: 195px;
-  row-gap: 160px;
+  row-gap: 140px;
   transform: translate(6px, 2px);
 }
