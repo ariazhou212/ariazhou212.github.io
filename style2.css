@@ -228,10 +228,12 @@ hr {
   grid-column: 7 / 11;
 }
 #discord-basics {
+  transform: translateY(-30px);
   grid-row: 32 / 36;
   grid-column: 3 / 7;
 }
 #discord-needs {
+  transform: translateY(-30px);
   grid-row: 32 / 36;
   grid-column: 7 / 11;
 }
