@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   height: 100%;
   background-color: #f0f0f0;
   color: #303030;
@@ -152,11 +151,11 @@ hr {
   border: 2px solid #303030;
   font-size: 1.5rem;
 }
-#challenge-discord {
+.challenge {
   grid-column: 5 / 13;
   grid-row: 3/5;
 }
-#challenge-discord p {
+.challenge p {
   margin-top: 14px;
 }
 #discord-waterink1 {
