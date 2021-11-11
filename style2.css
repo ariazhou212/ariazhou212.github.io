@@ -41,18 +41,10 @@ header {
 #background-header {
   background-color: #303030;
   height: 90px;
-  width: 1234px;
-  max-width: 100%;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
-}
-#my-logo {
-  position: absolute;
-  left: 7%;
-  transform: translate(0%, -50%);
-  width: 40px;
-  top: 50%;
 }
 #name {
   position: absolute;
@@ -62,13 +54,20 @@ header {
   transform: translate(-50%, -50%);
   top: 50%;
 }
+#logo-email {
+  margin: auto;
+  width: 1234px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#my-logo {
+  width: 30px;
+}
 #email {
-  position: absolute;
   font-size: 1rem;
   color: #f0f0f0;
-  right: 7%;
-  transform: translate(0%, -50%);
-  top: 50%;
 }
 #intro {
   padding-top: 260px;
@@ -378,6 +377,10 @@ h6 {
   transform: translate(-40px, -20px);
 }
 @media screen and (max-width: 1300px) {
+  #logo-email {
+    width: 95vw;
+    height: 90px;
+  }
   .project-container {
     width: 95vw;
     grid-template-columns: repeat(12, 7vw);
