@@ -37,13 +37,16 @@ header {
 }
 #background-header {
   background-color: #303030;
-  height: 100px;
-  width: 100%;
+  height: 90px;
+  width: 1234px;
+  max-width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
 }
 #my-logo {
   position: absolute;
-  left: 10.3%;
+  left: 7%;
   transform: translate(0%, -50%);
   width: 40px;
   top: 50%;
@@ -60,7 +63,7 @@ header {
   position: absolute;
   font-size: 1rem;
   color: #f0f0f0;
-  right: 10.3vw;
+  right: 7%;
   transform: translate(0%, -50%);
   top: 50%;
 }
@@ -75,6 +78,7 @@ header {
 }
 #pitch {
   margin: auto;
+  max-width: 95vw;
   font-size: 1.5rem;
   width: 100%;
   text-align: center;
@@ -103,8 +107,6 @@ hr {
 }
 .project-container {
   width: 1234px;
-  max-width: 95.6vw;
-  /* min-width: 1024px; */
   margin: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -134,6 +136,7 @@ hr {
   font-family: "Times New Roman", Times, serif;
   font-weight: normal;
   font-size: 3.5rem;
+  transform: translateY(-15px);
 }
 .project-container h4 {
   grid-column: 7 / 13;
@@ -269,6 +272,7 @@ ul li {
 .discord-quote {
   font-style: italic;
   padding: 10px 20px;
+  font-size: 2rem;
   grid-row: 35 / 37;
 }
 #discord-radar {
@@ -294,6 +298,10 @@ ul li {
 #frame-con {
   grid-column: 2 / 12;
   grid-row: 79 / 87;
+}
+#frame-con iframe {
+  width: 1024px;
+  height: 724px;
 }
 .loc-container {
   display: flex;
@@ -345,4 +353,112 @@ h6 {
 
 #finvestigator .button h6 {
   border: 2px solid #595959;
+}
+#fin-wm1 {
+  grid-column: 2 / 10;
+  grid-row: 3/5;
+  opacity: 20%;
+  width: 700px;
+  transform: translateY(-20px);
+}
+.light-bg {
+  width: 1234px;
+}
+#dc-uis {
+  width: 1234px;
+}
+#dc-card {
+  width: 900px;
+  transform: translate(-40px, -20px);
+}
+@media screen and (max-width: 1300px) {
+  .project-container {
+    width: 95vw;
+    grid-template-columns: repeat(12, 7vw);
+    grid-template-rows: repeat(91, 7vw);
+    column-gap: 1vw;
+    row-gap: 1vw;
+    transform-origin: top center;
+    /* transform: scale(0.8); */
+  }
+  .light-bg {
+    width: 95vw;
+  }
+  #cover-discord img {
+    width: 79vw;
+  }
+  #notification-container img {
+    width: 23vw;
+  }
+  #ba {
+    width: 47vw;
+  }
+  #discord-persona {
+    width: 7vw;
+  }
+  #discord-radar {
+    width: 63vw;
+  }
+  #discord-cards {
+    width: 74vw;
+    transform: translate(1vw, -4vw);
+  }
+  .discord-dr {
+    width: 47vw;
+  }
+  #dc-uis {
+    width: 95vw;
+  }
+  #dc-card {
+    width: 69vw;
+    transform: translate(-3vw, -3vw);
+  }
+  .loc-container {
+    column-gap: 13.5vw;
+    row-gap: 11vw;
+  }
+  #loc-number {
+    column-gap: 15.4vw;
+    row-gap: 12.6vw;
+  }
+  #des-container {
+    transform: translate(3.5vw, 0);
+    grid-template-columns: repeat(3, 12vw);
+    grid-template-rows: repeat(3, 13.6vw);
+    column-gap: 4.3vw;
+    row-gap: 0.7vw;
+  }
+  #frame-con iframe {
+    width: 79vw;
+    height: 55vw;
+  }
+  .project-container p {
+    font-size: 1.2rem;
+  }
+  .project-container h1 {
+    font-size: 6rem;
+  }
+  .project-container h2 {
+    font-size: 3rem;
+  }
+  .project-container h3 {
+    font-size: 3rem;
+    transform: translateY(-15px);
+  }
+  .project-container h4 {
+    font-size: 1.2rem;
+    transform: translateY(-25px);
+  }
+  ul {
+    font-size: 1.2rem;
+  }
+  .discord-line {
+    width: 63vw;
+    height: 5 px;
+  }
+  .discord-quote {
+    font-style: italic;
+    padding: 1.5vw 2.2vw;
+    font-size: 1.5rem;
+  }
 }

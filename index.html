@@ -29,7 +29,7 @@
     </div>
   </header>
   <div class="project-container" id="discord">
-    <div style="background: #efefef; filter: blur(100px); width: 1234px; height: 100%; grid-column: 1 /13; grid-row: 1/92; z-index: -10;"></div>
+    <div class="light-bg" style="background: #efefef; filter: blur(100px); height: 100%; grid-column: 1 /13; grid-row: 1/92; z-index: -10;"></div>
     <h1 class="dc-black">01. Discord Pro</h1>
     <h3 class="purple">2021.10</h3>
     <h4 class="dc-black">App Redesign</h4>
@@ -53,7 +53,7 @@
     <img src="./discord/waterink2.png" id="discord-waterink2">
     <h2 class="purple" id="research title" style="grid-row: 16 / 17;">Social Anxiety Disorder Players</h2>
     <h4 style="grid-row: 16 / 17;" class="dc-black">Secondary Research & Interviews</h4>
-    <div class="button" style="grid-row: 17 / 18; grid-column: 3 / 6;"><h6 class="dc-black">Behavioral Archetype</h6></div>
+    <div class="button" style="grid-row: 17 / 18; grid-column: 3 / 13;"><h6 class="dc-black">Behavioral archetype</h6></div>
     <img src="./discord/ba.png" id="ba">
 
     <img src="./discord/waterink3.png" id="discord-waterink3">
@@ -95,11 +95,11 @@
       </ul>
     </div>
     <div class="discord-line" style="grid-row: 34 / 35;"></div>
-    <p class="discord-quote" style="grid-column: 3 / 7; font-size: 2rem;">“I like the feeling of being a part of a team and working hard to achieve goals together.”</p>
-    <p class="discord-quote" style="grid-column: 7 / 11; font-size: 2rem;">I only play games at midnight when my roommates are sleeping, so I can’t talk.”</p>
+    <span class="discord-quote" style="grid-column: 3 / 7;">“I like the feeling of being a part of a team and working hard to achieve goals together.”</span>
+    <span class="discord-quote" style="grid-column: 7 / 11;">I only play games at midnight when my roommates are sleeping, so I can’t talk.”</span>
     <div class="discord-line" style="grid-row: 36 / 37;"></div>
 
-    <div class="button" style="grid-row: 38 / 39; grid-column: 3 / 6;"><h6 class="dc-black">Prioritize key needs</h6></div>
+    <div class="button" style="grid-row: 38 / 39; grid-column: 3 / 13;"><h6 class="dc-black">Prioritize key needs</h6></div>
     <img src="./discord/radar.png" id="discord-radar">
 
     <img src="./discord/cards.png" id="discord-cards">
@@ -109,10 +109,10 @@
     <img src="./discord/draft2.png" class="discord-dr" style="grid-column: 7 / 13;">
 
     <h2 class="purple" style="grid-row: 58 / 59;">UI Design & Prototype</h2>
-    <img src="./discord/ui.png" style="width: 1234px; grid-column: 1 / 13; grid-row: 59 / 65;">
+    <img id='dc-uis' src="./discord/ui.png" style="grid-column: 1 / 13; grid-row: 59 / 65;">
 
     <div class="button" style="grid-row: 66 / 67; grid-column: 3 / 11;"><h6 class="dc-black">Card details</h6></div>
-    <img src="./discord/card.png" style="width: 900px; grid-column: 3 / 12; grid-row: 67 / 73; transform: translate(-40px,-20px);">
+    <img id='dc-card' src="./discord/card.png" style="grid-column: 3 / 12; grid-row: 67 / 73;">
     <div class="loc-container">
       <img src="./discord/loc.png">
       <img src="./discord/loc.png">
@@ -199,7 +199,7 @@
     </div>
 
     <div id="frame-con">
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 1024px; height: 724px;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FQMfwq04b3hqCEmhPLG3kmi%2Fproject2-aria-sherrie%3Fpage-id%3D196%253A2726%26node-id%3D196%253A2762%26viewport%3D331%252C48%252C0.04%26scaling%3Dscale-down%26starting-point-node-id%3D196%253A2753" allowfullscreen></iframe>
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FQMfwq04b3hqCEmhPLG3kmi%2Fproject2-aria-sherrie%3Fpage-id%3D196%253A2726%26node-id%3D196%253A2762%26viewport%3D331%252C48%252C0.04%26scaling%3Dscale-down%26starting-point-node-id%3D196%253A2753" allowfullscreen></iframe>
     </div>
 
     <h2 class="purple" style="grid-row: 87 / 88;">Key Takeaways & Future Steps</h2>
@@ -207,23 +207,24 @@
     <p style="grid-row: 88 / 91; grid-column: 3 /11;">This is a school project. We initially chose to redesign Discord for the multiplayer online battle games. But as we conducted research, we noticed that the criticisms are mostly about privacy issues. So we decided to focus on the minority group of SAD players and tried to make it as inclusive as possible.
       <br></br>We did a few iterations on the card design - our essential feature. But we don’t have the time and resources to test them. We also developed a design system for the card, but we still need to figure out whether it’s feasible to apply to other elements in the app.</p>
 
-    <hr style="width: 1234px; grid-row: 91 / 92; grid-column: 1 /13; max-width: none; align-self: end;">
+    <hr class='end-line' style="width: 1234px; grid-row: 91 / 92; grid-column: 1 /13; max-width: 95vw; align-self: end;">
   </div>
 
   <div class="project-container" id="finvestigator">
-    <div style="background: #F4FDFC; filter: blur(100px); width: 1234px; height: 100%; grid-column: 1 /13; grid-row: 1/91; z-index: -10;"></div>
+    <div class = 'light-bg' style="background: #F4FDFC; height: 100%; filter: blur(100px); grid-column: 1 /13; grid-row: 1/91; z-index: -10;"></div>
     <h1 class="fin-black">02. Finvestigator</h1>
     <h3 class="fin-green" style="grid-column: 9 / 13;">2021.8~2021.12</h3>
     <h4 style="grid-column: 8 / 13;">Product design</h4>
     <h2 class="fin-blue">Finfluencers verification platform</h2>
-    
+    <img src="./finvestigator/logo1.png" id="fin-wm1">
+
     <div class="challenge" style="grid-column-end: 11;">
       <div class="button"><h6>Challenge</h6></div>
       <p>How might we help <span class="fin-blue" style="font-weight: bold;">young adults</span> develop a long-term foundation of <span class="fin-green" style="font-weight: bold;">financial literacy</span> with an experience that's engaging and fun?</p>
     </div>
 
 
-    <hr style="width: 1234px; grid-row: 91 / 92; grid-column: 1 /13; max-width: none; align-self: end;">
+    <hr class='end-line' style="width: 1234px; grid-row: 91 / 92; grid-column: 1 /13; max-width: 95vw; align-self: end;">
   </div>
 
   
