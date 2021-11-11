@@ -441,6 +441,7 @@ h6 {
   #loc-number {
     column-gap: 15vw;
     row-gap: 14vw;
+    transform: translate(0.3vw, 0vw);
   }
   .item-c {
     width: 12.5vw;
@@ -522,6 +523,9 @@ h6 {
   ul li {
     margin: 0 0 0.1vw 0;
   }
+  .item-c ul li {
+    margin: 0 0 1vw 1vw;
+  }
   .dc-wm1 {
     font-size: 5rem;
   }
@@ -530,6 +534,9 @@ h6 {
   }
   .discord-quote {
     font-size: 1.25rem;
+  }
+  #loc-number {
+    transform: translate(0.4vw, 0.3vw);
   }
   #psn-name {
     font-size: 1.5rem;
@@ -586,5 +593,15 @@ h6 {
   }
   #psn-name {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  #dc-l1 {
+    transform: translateY(1vw);
+  }
+  #loc-number {
+    column-gap: 14.8vw;
+    row-gap: 13.5vw;
+    transform: translate(0.3vw, 0.3vw);
   }
 }
