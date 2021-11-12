@@ -112,10 +112,15 @@ hr {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(91, 90px);
   margin-top: 116px;
   column-gap: 14px;
+}
+#discord {
+  grid-template-rows: repeat(91, 90px);
   row-gap: 14px;
+}
+#dc-bg {
+  height: 9450px;
 }
 .project-container p {
   font-size: 1.5rem;
@@ -355,7 +360,6 @@ h4,
 h6 {
   color: #595959;
 }
-
 #finvestigator .button h6 {
   border: 2px solid #595959;
 }
@@ -376,6 +380,44 @@ h6 {
   width: 900px;
   transform: translate(-40px, -20px);
 }
+#finvestigator {
+  grid-template-rows: repeat(16, 90px);
+  row-gap: 14px;
+}
+#team-info {
+  width: 1026px;
+}
+#fin-bg {
+  height: 1650px;
+}
+#cofe {
+  grid-template-rows: repeat(16, 90px);
+  row-gap: 14px;
+}
+.cf-black {
+  color: #253127;
+}
+.cf-orange {
+  color: #ff671f;
+}
+.cf-yellow {
+  color: #ffc539;
+}
+#cofe p,
+h4,
+h6 {
+  color: #253127;
+}
+#cf-wm1 {
+  width: 610px;
+  grid-column: 2/13;
+  opacity: 0.2;
+  grid-row: 4 / 6;
+  transform: translateY(75px);
+}
+#cofe .button h6 {
+  border: 2px solid #253127;
+}
 @media screen and (max-width: 1300px) {
   #logo-email {
     width: 95vw;
@@ -384,14 +426,26 @@ h6 {
   .project-container {
     width: 95vw;
     grid-template-columns: repeat(12, 7vw);
-    grid-template-rows: repeat(91, 7vw);
     column-gap: 1vw;
-    row-gap: 1vw;
     transform-origin: top center;
     /* transform: scale(0.8); */
   }
+  #discord {
+    grid-template-rows: repeat(91, 7vw);
+    row-gap: 1vw;
+  }
+  #finvestigator {
+    grid-template-rows: repeat(16, 7vw);
+    row-gap: 1vw;
+  }
   .light-bg {
     width: 95vw;
+  }
+  #dc-bg {
+    height: 727vw;
+  }
+  #fin-bg {
+    height: 127vw;
   }
   .dc-wis {
     width: 15vw;
@@ -407,6 +461,10 @@ h6 {
   }
   #discord-persona {
     width: 7vw;
+  }
+  #discord-waterink1 {
+    width: 31vw;
+    transform: translateY(-2vw);
   }
   #discord-basics {
     transform: translateY(-2vw);
@@ -444,7 +502,7 @@ h6 {
   #loc-number {
     column-gap: 15vw;
     row-gap: 14vw;
-    transform: translate(0.3vw, 0vw);
+    transform: translate(0.4vw, 0.4vw);
   }
   .item-c {
     width: 12.5vw;
