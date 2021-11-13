@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
-  background-color: #f0f0f0;
+  /* background-color: #ffffff; */
   color: #303030;
 }
 *,
@@ -391,17 +391,17 @@ h6 {
   height: 1650px;
 }
 #cofe {
-  grid-template-rows: repeat(16, 90px);
+  grid-template-rows: repeat(90, 90px);
   row-gap: 14px;
 }
 .cf-black {
   color: #253127;
 }
 .cf-orange {
-  color: #ff671f;
+  color: #f19e51;
 }
 .cf-yellow {
-  color: #ffc539;
+  color: #f1c451;
 }
 #cofe p,
 h4,
@@ -417,6 +417,32 @@ h6 {
 }
 #cofe .button h6 {
   border: 2px solid #253127;
+}
+#cf-cover {
+  width: 1026px;
+}
+#cf-field {
+  width: 610px;
+}
+#field-pain {
+  width: 372px;
+  margin-left: 30px;
+}
+.cf-persona {
+  width: 1000px;
+  transform: translate(-50px, -40px);
+}
+#cf-journey {
+  width: 1234px;
+}
+#field-pain p::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  transform: translate(-15px, 2px);
+  background-image: url(./cofe/bullet.png);
 }
 @media screen and (max-width: 1300px) {
   #logo-email {
