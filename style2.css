@@ -104,11 +104,39 @@ header {
   text-align: center;
   font-size: 2rem;
 }
+#navi span {
+  cursor: pointer;
+}
+#navi-container2 {
+  position: fixed;
+  top: 0%;
+  background: linear-gradient(
+    180deg,
+    #ffffff 52.08%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 13px;
+  height: 90px;
+  transition: top 0.2s ease-in-out;
+  display: none;
+  z-index: 100;
+}
+#navi2 {
+  text-align: center;
+  font-size: 2rem;
+}
+#navi2 span {
+  cursor: pointer;
+}
 hr {
   border: none;
   border-top: 2px solid #000000;
-  max-width: calc((95.6vw - 302.86px) / 2);
-  width: 450px;
+  max-width: calc((95.6vw - 250px) / 2);
+  width: 500px;
 }
 footer {
   width: 100%;
