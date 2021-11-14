@@ -1,70 +1,59 @@
-$('#projects').mouseover(function(){
-  $('#project-page').addClass('fadeout');
-  $('#about-page').addClass('fadeout');
-  $('#filter').css('display','block');
-})
-$('#projects').mouseout(function(){
-  $('#project-page').removeClass('fadeout');
-  $('#about-page').removeClass('fadeout');
-  $('#filter').css('display','none');
-})
-$('#about').mouseover(function(){
-  $('#project-page').addClass('fadeout');
-  $('#about-page').addClass('fadeout');
-  $('#filter2').css('display','block');
-})
-$('#about').mouseout(function(){
-  $('#project-page').removeClass('fadeout');
-  $('#about-page').removeClass('fadeout');
-  $('#filter2').css('display','none');
-})
+$("#navi-dc").click(function() {
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#discord").offset().top
+  }, 2000);
+});
+$("#navi-fin").click(function() {
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#finvestigator").offset().top
+  }, 2000);
+});
+$("#navi-cf").click(function() {
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#cofe").offset().top
+  }, 2000);
+});
+$("#navi-fun").click(function() {
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#fun").offset().top
+  }, 2000);
+});
 
-//change font of title
-$('#intro').children('h1').click(function(){
-  var font = $('#intro').children('h1').css('font-family')
-  if (font == 'silkscreennormal'){
-    $('#intro').children('h1').css('font-family','sans-serif');
-  } else {
-    $('#intro').children('h1').css('font-family','silkscreennormal');
-  }
-})
-$('#about-title').click(function(){
-  var font = $('#about-title').css('font-family')
-  if (font == 'silkscreennormal'){
-    $('#about-title').css('font-family','sans-serif');
-  } else {
-    $('#about-title').css('font-family','silkscreennormal');
-  }
-})
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('#navi-container').outerHeight();
 
-//hover each project card
-$('.project-card').each(function(){
-  $(this).mouseover(function(){
-    $(this).addClass('hover-over');
-  })
-  $(this).mouseout(function(){
-    $(this).removeClass('hover-over');
-  })
-})
+$(window).scroll(function(event){
+    didScroll = true;
+});
 
-//play gif when hovering
-$('#foxit').mouseover(function(){
-  $('#foxit-img').attr('src','./images/foxit.gif');
-})
-$('#foxit').mouseout(function(){
-  $('#foxit-img').attr('src','./images/foxit.png');
-})
-$('#websites').mouseover(function(){
-  $('#web-img').attr('src','./images/web.gif');
-})
-$('#websites').mouseout(function(){
-  $('#web-img').attr('src','./images/web.png');
-})
-$('#others').mouseover(function(){
-  $('#others-img').attr('src','./images/others.gif');
-})
-$('#others').mouseout(function(){
-  $('#others-img').attr('src','./images/others.png');
-})
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
 
-
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('navi-container').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('navi-container').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
