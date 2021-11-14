@@ -232,7 +232,7 @@
   </div>
 
   <div class="project-container" id="cofe">
-    <div class = 'light-bg' id='cf-bg' style="background: #F8F3E7; height: 9000px; filter: blur(100px); grid-column: 1 /13; grid-row: 1/17; z-index: -10;"></div>
+    <div class = 'light-bg' id='cf-bg' style="background: #F8F3E7; filter: blur(100px); grid-column: 1 /13; grid-row: 1/17; z-index: -10;"></div>
     <h1 class="cf-black">03. Cofe</h1>
     <h3 class="cf-yellow" style="grid-column: 5 / 13;">2021.9~2021.10</h3>
     <h4 style="grid-column: 4 / 13;">Product design</h4>
@@ -250,7 +250,7 @@
     <h4 style="grid-row: 15 / 16;">Research & Interviews</h4>
     <div class="button cf-black" style="grid-row: 16/17;grid-column: 2/13;"><h6 class="cf-black">Field research</h6></div>
     <img src="./cofe/field.png" id="cf-field" style="grid-column: 2 / 8;grid-row: 17/23;">
-    <div style="grid-row: 17 / 34; grid-column: 8 / 12;">
+    <div style="grid-row: 17 / 34; grid-column: 8 / 12; max-width: 100%;">
       <span class="discord-psn-title" style="color: #f19e51;">Pains</span>
       <div class="cf-black" id="field-pain">
         <p>Customers don’t follow the designed route.</p>
@@ -262,18 +262,73 @@
     </div>
 
     <div class="button cf-black" style="grid-row: 22/23;grid-column: 2/13;"><h6 class="cf-black">Personas</h6></div>
-    <img src="./cofe/persona1.png" style="grid-column: 2/11; grid-row: 23/27;" class="cf-persona">
-    <img src="./cofe/persona2.png" style="grid-column: 3/12; grid-row: 28/32;" class="cf-persona">
+    <img src="./cofe/persona1.png" style="grid-column: 2/13; grid-row: 23/27;" class="cf-persona">
+    <img src="./cofe/persona2.png" style="grid-column: 3/13; grid-row: 28/32;" class="cf-persona">
 
     <div class="button cf-black" style="grid-row: 33/34;grid-column: 2/13;"><h6 class="cf-black">User Journey (customer)</h6></div>
     <img src="./cofe/journey.png" style="grid-column: 1/13; grid-row: 34/40;" id="cf-journey">
 
-    <h2 class="cf-orange" style="grid-row: 42/ 42;">Coffee industry in China</h2>
-    <h4 style="grid-row: 42 / 42;">Growing market and higher consumer expectations</h4>
-        <!-- <h2 class="cf-orange" style="grid-row: 41/ 42;">Brainstorm & Ideate</h2>
-    <h4 style="grid-row: 41 / 42;">Value Proposition</h4> -->
+    <h2 class="cf-orange" style="grid-row: 42/ 42;">Coffee Industry in China</h2>
+    <h4 style="grid-row: 42 / 42;">An Emerging Market</h4>
+    <img src="./cofe/waterink1.png" style="grid-area: 43/2/53/12;" id="cf-wi1">
+    <h2 class="cf-yellow cf-stat" style="grid-area: 43/3/44/5; line-height: .7;" ><span>6</span>th</h2>
+    <p class="mkt-title" style="grid-area: 44/3/45/5;font-weight: bold;">Market size</p>
+    <p style="grid-area: 43/5/45/11;">Tea remains the traditional drink of China. The tendency of Chinese consumers to prefer tea over coffee ranks the Chinese coffee market only at the 6th largest coffee market in the world. China’s consumption of coffee per capita remains relatively low at around 7 cups a year.</p>
 
-    <hr class='end-line' style="width: 1234px; grid-row: 90 / 91; grid-column: 1 /13; max-width: 95vw; align-self: end;">
+    <p style="grid-area: 45/3/47/9;">Chinese coffee consumption has risen spectacularly with a 500% increase between 2006 and 2018. According to the data from the China Coffee Association Beijing (CCAB) coffee consumption will increase at an annual rate of 15%.</p>
+    <h2 class="cf-orange cf-stat" style="grid-area: 45/9/47/11; line-height: .7;" ><span>15</span>%</h2>
+    <p class="mkt-title" style="grid-area: 46/9/47/11;font-weight: bold;">Annual increasing rate</p>
+
+    <h2 class="cf-yellow cf-stat" style="grid-area: 47/3/48/5; line-height: .7;"><span>75</span>%</h2>
+    <p class="mkt-title" style="grid-area: 48/3/49/5;font-weight: bold;">Middle-class young adults</p>
+    <p style="grid-area: 47/5/49/11;">The young people of the emerging middle class represent the driving force (75%). Within this segment, female customers represent the largest share-70%. Young consumers are demanding and pay particular attention to professionalism, services tailored to their tastes and the diversification of menus among the various coffees.</p>
+        
+    <h2 class="cf-orange" style="grid-row: 50/ 51;">Brainstorm & Ideate</h2>
+    <h4 style="grid-row: 50 / 51;">Value Proposition</h4>
+
+    <div class="button cf-black" style="grid-row: 51/52;grid-column: 4/13;"><h6 class="cf-black">Goals & Solutions</h6></div>
+    <img src="./cofe/vp.png" style="grid-area: 52/4/56/9;" id="cf-vp">
+    <img src="./cofe/logo.png" style="grid-area: 56/3/60/5; max-width: 11vw;" id="cf-logo">
+    <div id="cf-line" style="grid-area: 56/4/60/5;"></div>
+    <div class="cf-customer" style="align-self: start;">
+      <span id='cf-c1' class="cf-orange">Customers</span>
+      <p>Order ahead and reserve a seat at the same time.</p>
+    </div>
+    <div class="cf-customer" style="align-self: center;">
+      <span id='cf-c2' class="cf-yellow">Coffee lovers</span>
+      <p>Know more about coffee beans/drink and connect with baristars*.</p>
+    </div>
+    <div class="cf-customer" style="align-self: end;">
+      <span id='cf-c3' class="cf-black">Baristas</span>
+      <p>Work more efficiently and make extra money while giving lectures*.</p>
+    </div>
+
+    <h2 class="cf-orange" style="grid-row: 61/ 62;">Wireframes & User Flow</h2>
+    <div class="button cf-black" style="grid-row: 62/63;grid-column: 2/13;"><h6 class="cf-black">Information Architecture</h6></div>
+    <img src="./cofe/map.png" style="grid-area: 63/2/67/12;" id="cf-map">
+    <div class="button cf-black" style="grid-row: 67/68;grid-column: 2/13;"><h6 class="cf-black">Order & Reserve user flow</h6></div>
+    <img src="./cofe/flow.png" style="grid-area: 68/3/74/11;" id="cf-flow">
+
+    <h2 class="cf-orange" style="grid-row: 75/ 76;">Visual Designs</h2>
+    <div class="button cf-black" style="grid-row: 76/77;grid-column: 3/13;"><h6 class="cf-black">Branding</h6></div>
+    <div class="cf-colors" style="grid-column: 3/4; background-color: #253127;"></div>
+    <div class="cf-colors" style="grid-column: 5/6; background-color: #f19e51;"></div>
+    <div class="cf-colors" style="grid-column: 7/8; background-color: #F1C451;"></div>
+    <div class="cf-colors" style="grid-column: 9/10; background-color: #F8F3E7;"></div>
+    <p class="cf-cl-text" style="grid-column: 3/5;"><span>Calm</span><br>#253127</p>
+    <p class="cf-cl-text" style="grid-column: 5/7;"><span>Energetic</span><br>#F19E51</p>
+    <p class="cf-cl-text" style="grid-column: 7/9;"><span>Delightful</span><br>#F1C451</p>
+    <p class="cf-cl-text" style="grid-column: 9/11;"><span>Pure</span><br>#F8F3E7</p>
+    <img src="./cofe/font.png" style="grid-area: 79/3/80/11;" id="cf-font">
+
+    <div class="button cf-black" style="grid-row: 81/82;grid-column: 2/13;"><h6 class="cf-black">UI design & Prototype</h6></div>
+    <img src="./cofe/screens.png" style="grid-area: 82/2/87/12;" id="cf-screen">
+    <div style="position:relative; max-width:100%;grid-area: 88/5/96/9; width: 360px;"><iframe src="https://player.vimeo.com/video/645631086?h=f38b7a4108&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Cofe prototype"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    <img src="./cofe/waterink2.png" id="cf-wi2">
+    <img src="./cofe/waterink3.png" id="cf-wi3">
+    <h2 class="cf-orange" style="grid-row: 97/ 98;">Key Takeaways</h2>
+    <p style="grid-area: 98/3/101/11;">I grew up in mainland China, where coffee culture just started. I was impressed by how culture shapes people’s behavior as I did field research in the US and recalled my own observation in China. Thus I decided to do the market research to figure out where the product most likely to succeed. In this project, I started market research after I finished all the UI, but I’ll pay more attention to it during the initial research in my future projects.</p>
+    <hr class='end-line' style="width: 1234px; grid-row: 100 / 101; grid-column: 1 /13; max-width: 95vw; align-self: end;">
   </div>
 
   
