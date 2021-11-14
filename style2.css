@@ -17,6 +17,9 @@ a {
   text-decoration: none;
   color: black;
 }
+#intro2 {
+  display: none;
+}
 iframe {
   max-width: 100%;
 }
@@ -156,11 +159,11 @@ footer {
   column-gap: 14px;
 }
 #discord {
-  grid-template-rows: repeat(91, 90px);
+  grid-template-rows: repeat(92, 90px);
   row-gap: 14px;
 }
 #dc-bg {
-  height: 9450px;
+  height: 9564px;
 }
 .project-container p {
   font-size: 1.5rem;
@@ -350,52 +353,47 @@ ul li {
 }
 #frame-con {
   grid-column: 2 / 12;
-  grid-row: 79 / 87;
+  grid-row: 80 / 88;
 }
 #frame-con iframe {
   width: 1024px;
   height: 724px;
 }
-.loc-container {
+#dc-guide-container {
+  width: 922px;
+  max-width: 100%;
+  grid-area: 73/3/79/12;
   display: flex;
-  align-items: flex-start;
+  gap: 14px;
   flex-wrap: wrap;
-  grid-column: 4 / 10;
-  grid-row: 73 / 76;
-  column-gap: 178px;
-  row-gap: 130px;
+  align-content: flex-start;
 }
-.loc-container img {
-  width: 30px;
-}
-#des-container {
-  transform: translate(45px, 0px);
-  grid-column: 4 / 10;
-  grid-row: 73 / 77;
-  font-size: 0.8em;
+.loc-container {
   display: grid;
-  grid-template-columns: 160px 160px 160px;
-  grid-template-rows: 160px 160px 160px;
-  column-gap: 48px;
-  row-gap: 7px;
+  grid-template: 1fr / 30px 1fr;
+  width: 298px;
+  gap: 10px;
+  height: 194px;
 }
-.item-c {
-  width: 160px;
-  height: 180px;
+.loc-sign {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  text-align: center;
 }
-#des-container ul {
-  list-style-type: none;
-  transform: translateX(0px);
-}
-#loc-number {
+.loc-sign p,
+.loc-sign img {
+  grid-area: 1/1/2/2;
   color: #f0f0f0;
   font-weight: bold;
-  column-gap: 195px;
-  row-gap: 140px;
-  transform: translate(6px, 2px);
 }
-#loc-number p {
-  color: #f0f0f0;
+.item-c {
+  transform: translateY(-5px);
+}
+.item-c ul {
+  list-style-type: none;
+  transform: translateX(0px);
 }
 
 #finvestigator p,
@@ -515,6 +513,7 @@ h6 {
 .cf-customer span::before {
   content: "";
   display: inline-block;
+  background-repeat: no-repeat;
   width: 19.2px;
   height: 20px;
   background-size: contain;
@@ -581,6 +580,9 @@ h6 {
 .cf-stat span {
   font-size: 2.3em;
 }
+.dc-persona ul {
+  width: 395px;
+}
 @media screen and (max-width: 1300px) {
   #logo-email {
     width: 95vw;
@@ -594,7 +596,7 @@ h6 {
     /* transform: scale(0.8); */
   }
   #discord {
-    grid-template-rows: repeat(91, 7vw);
+    grid-template-rows: repeat(92, 7vw);
     row-gap: 1vw;
   }
   #finvestigator {
@@ -613,7 +615,7 @@ h6 {
     width: 95vw;
   }
   #dc-bg {
-    height: 727vw;
+    height: 735vw;
   }
   #fin-bg {
     height: 127vw;
@@ -665,36 +667,29 @@ h6 {
   #dc-uis {
     width: 95vw;
   }
-  .loc-container img {
-    width: 2.3vw;
+  .dc-persona ul {
+    width: 28vw;
   }
   #dc-card {
     width: 69vw;
     transform: translate(-3vw, -3vw);
   }
+  #dc-guide-container {
+    width: 71vw;
+    gap: 1vw;
+  }
   .loc-container {
-    column-gap: 13.7vw;
-    row-gap: 13vw;
+    grid-template: 1fr / 2.3vw 1fr;
+    width: 22.99vw;
+    gap: 0.8vw;
+    height: 15vw;
   }
-  #loc-number {
-    column-gap: 15vw;
-    row-gap: 14vw;
-    transform: translate(0.4vw, 0.4vw);
+  .loc-sign {
+    width: 2.3vw;
+    height: 2.3vw;
   }
-  .item-c {
-    width: 12.5vw;
-    height: 13vw;
-  }
-  #des-container {
-    transform: translate(3.5vw, 0);
-    grid-template-columns: repeat(3, 12vw);
-    grid-template-rows: repeat(3, 13.6vw);
-    column-gap: 4vw;
-    row-gap: 2vw;
-    font-size: 1.1vw;
-  }
-  #des-container ul li {
-    font-size: 1.2vw;
+  .loc-sign img {
+    width: 2.3vw;
   }
   #frame-con iframe {
     width: 79vw;
@@ -727,8 +722,7 @@ h6 {
     font-size: 1.2rem;
   }
   ul li {
-    /* line-height: 100%; */
-    margin: 0 0 1vw 1vw;
+    margin-bottom: 0vw;
   }
   .discord-line {
     width: 63vw;
@@ -745,12 +739,19 @@ h6 {
     background-repeat: no-repeat;
     transform: translate(-1vw, 0);
   }
-  .cf-stat span {
-    font-size: 2.2em;
+
+  .cf-customer p {
+    padding-top: 1vw;
+  }
+  #discord-about span {
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 1075px) {
   #finvestigator h1 {
+    font-size: 5.5rem;
+  }
+  .cf-stat span {
     font-size: 5.5rem;
   }
 }
@@ -776,12 +777,6 @@ h6 {
   ul {
     font-size: 1rem;
   }
-  ul li {
-    margin: 0 0 0.1vw 0;
-  }
-  .item-c ul li {
-    margin: 0 0 1vw 1vw;
-  }
   .dc-wm1 {
     font-size: 5rem;
   }
@@ -791,22 +786,8 @@ h6 {
   .discord-quote {
     font-size: 1.25rem;
   }
-  #loc-number {
-    transform: translate(0.4vw, 0.3vw);
-  }
   #psn-name {
     font-size: 1.5rem;
-  }
-  #des-container {
-    transform: translate(3.5vw, 0);
-    grid-template-columns: repeat(3, 12vw);
-    grid-template-rows: repeat(3, 13.6vw);
-    column-gap: 4vw;
-    row-gap: 2vw;
-    font-size: 1.1vw;
-  }
-  #des-container ul li {
-    font-size: 1.2vw;
   }
 }
 
@@ -833,7 +814,10 @@ h6 {
     font-size: 1rem;
   }
   .discord-psn-title {
-    font-size: 1.5em;
+    font-size: 1.1rem;
+  }
+  #discord-about span {
+    font-size: 1.1rem;
   }
   #discord-basics {
     transform: translateY(0vw);
@@ -853,22 +837,120 @@ h6 {
   #psn-name {
     font-size: 1rem;
   }
+  .cf-customer span {
+    font-size: 1em;
+  }
+  .cf-customer span::before {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 1vw;
+  }
+  .cf-stat span {
+    font-size: 4.5rem;
+  }
 }
 @media screen and (max-width: 800px) {
   #dc-l1 {
     transform: translateY(1vw);
   }
-  #loc-number {
-    column-gap: 14.8vw;
-    row-gap: 13.5vw;
-    transform: translate(0.3vw, 0.3vw);
+}
+@media screen and (max-width: 768px) {
+  .project-container p {
+    font-size: 0.8rem;
+  }
+  .project-container h1 {
+    font-size: 4rem;
+  }
+  #finvestigator h1 {
+    font-size: 4rem;
+  }
+  .project-container h2 {
+    font-size: 1.5rem;
+  }
+  .project-container h3 {
+    font-size: 1.5rem;
+  }
+  .project-container h4 {
+    font-size: 0.8rem;
+  }
+  .project-container h6 {
+    font-size: 0.8rem;
+  }
+  .discord-psn-title {
+    font-size: 1em;
+  }
+  #discord-basics {
+    transform: translateY(0vw);
+  }
+  #discord-needs {
+    transform: translateY(0vw);
+  }
+  #discord-about span {
+    font-size: 1rem;
+  }
+  ul li {
+    font-size: 0.8rem;
+  }
+  .discord-quote {
+    font-size: 0.9rem;
+  }
+  #discord .button h6 {
+    border: 0.1vw solid #202225;
+  }
+  #finvestigator .button h6 {
+    border: 0.1vw solid #595959;
+  }
+  #cofe .button h6 {
+    border: 0.1vw solid #253127;
+  }
+  .cf-stat span {
+    font-size: 3.5rem;
   }
 }
-.nav-up {
-  top: -40px;
-}
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 600px) {
+  #navi-container,
+  #name,
+  #intro,
+  #navi-container2,
   .project-container {
     display: none;
+  }
+  #intro2 {
+    position: absolute;
+    display: block;
+    width: 85vw;
+    height: 50vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  #intro2 h1 {
+    font-size: 3rem;
+  }
+  #intro2 p {
+    font-size: 1rem;
+  }
+  header {
+    height: 100vh;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+  }
+  #send-email {
+    position: absolute;
+    margin-top: 10vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  #send-email p {
+    border: 0.1vw solid black;
+    padding: 1vw;
+  }
+  #send-email h2 {
+    font-size: 2rem;
+    margin-top: 4vw;
   }
 }
