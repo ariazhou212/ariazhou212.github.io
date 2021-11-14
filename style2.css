@@ -867,3 +867,8 @@ h6 {
 .nav-up {
   top: -40px;
 }
+@media screen and (max-width: 760px) {
+  .project-container {
+    display: none;
+  }
+}
