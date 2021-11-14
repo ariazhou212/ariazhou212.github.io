@@ -70,8 +70,13 @@ function hasScrolled() {
       // Scroll Down
       $('#navi-container2').fadeOut(1000);
     } else if(st + $(window).height() < $(document).height() && Math.abs(lastScrollTop - st) <= delta){
-        // Scroll Up
-      $('#navi-container2').css('display','flex');;
+      // Scroll Up
+      if ($('#navi-container2').css('display') == 'none')  {
+        $('#navi-container2').css({opacity: 0, display: 'flex'}).animate({
+          opacity: 1
+        }, 1000);
+      }
+      // $('#navi-container2').css('display','flex');;
     }
 
     if(st < 800) {
