@@ -171,13 +171,7 @@ a {
   font-size: 4rem;
   display: none;
 }
-#mission {
-  /* position: absolute; */
-  /* top: 1vh;
-  right: 1vw; */
-  color: red;
-  display: none;
-}
+
 #sign-sign {
   width: 30vw;
   height: 30vw;
@@ -348,7 +342,7 @@ h1 {
   opacity: 0;
 }
 .fade-title {
-  animation: fade 4s linear;
+  animation: fade 3s linear;
 }
 @keyframes fade {
   0% {
@@ -570,10 +564,13 @@ h1 {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(88, 46, 17);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   display: none;
   flex-direction: column;
+}
+.mission-text {
+  margin: 2vh 1vw;
 }
 #mission-card h2 {
   font-size: 3rem;
@@ -581,8 +578,8 @@ h1 {
   margin: 3vh 2vw;
 }
 #puzzle {
-  width: 40vh;
-  height: 40vh;
+  width: 35vh;
+  height: 35vh;
   display: grid;
   justify-self: center;
   align-self: center;

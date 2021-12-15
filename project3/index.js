@@ -1,4 +1,4 @@
-var streetWidth = $('#street-img').width(), streetHeight = $('#street-img').height(),gameOver = false,girlTalked = false;
+var streetWidth = $('#street-img').width(), streetHeight = $('#street-img').height(),gameOver = false,girlTalked = false,girlSaved = false;
 var boyWidth = $('#boy2').width(), boyHeight = $('#boy2').height(),startGame = false
 $('#street-container').css({'width':streetWidth,'height':streetHeight});
 function diffrence (a, b) {
@@ -74,7 +74,6 @@ window.onkeypress=function(e) {
         weaponGot = true;
         $('#chain-container').css('display','grid');
         $('#fkey-0').appendTo($('#trash'))
-        $('body').prepend('<h1 class="fade-title">Got a chainsaw</h1>')
         $('#chain-card').addClass('fade-title');
         $('#weapon-box').fadeOut(1);
     } else if (toolshopstate1 == true && breadGot == false) {
@@ -82,7 +81,6 @@ window.onkeypress=function(e) {
           breadGot = true;
           $('#bread-container').css('display','grid');
           $('#fkey-1').appendTo($('#trash'));
-          $('body').prepend('<h1 id="bread-got" class="fade-title">Got rotted bread</h1>')
           $('#bread-card').addClass('fade-title');
         } else {
           showdialogbear();
@@ -103,6 +101,9 @@ window.onkeypress=function(e) {
       girlTalked = true;
         showdialogtear();
         if(heartGot==true) {
+          girlSaved = true;
+          $('#mission3').css('color','green');
+          $('#open-m').css('color','green');
           $('#speaking-img2').attr('src','./images/dialog-boy.png')
           $('#dialog-text2').html('who are you?')
           $('#heart-container').css('display','none');
@@ -127,7 +128,6 @@ window.onkeypress=function(e) {
         $('#sword1').fadeIn(1)
       } else {
         sword1Got = true
-        $('body').prepend('<h1 class="fade-title">Get sword fragment no.1 /4</h1>')
         $('#sword1-card').addClass('fade-title');
         $('#sword1-container').css('display','grid');
         $('#sword-piece1').fadeIn(1);
@@ -155,7 +155,9 @@ window.onkeypress=function(e) {
       console.log('1')
     } else if (toolshopstate8 == true){
       $('#street-container').fadeOut(1)
-      $('#tool-shop-container').fadeIn(1)
+      $('#tool-shop-container').fadeIn(1);
+      $('#mission3').css('display','block');
+      $('#open-m').css('color','red');
       $('#boy2').appendTo('#tool-shop-container');
       $('#boy2').css('left','72%');
       $('#boy2').css('bottom','0px');
@@ -203,23 +205,24 @@ window.onkeypress=function(e) {
     } else if (toolshopstate9 == true) {
       if(swordcount < 1.5){
         $('#dessert-conv').css('display','flex');
-        $('#mission').html('Mission: find a enchanted weapon');
-        $('#mission-text').html('Mission: find an enchanted weapon');
+        $('#mission2').css('display','block');
+        $('#open-m').css('color','red');
         $('#puzzle').css('display','grid');
-        $('#mission').addClass('light2')
         $('.container').addClass('filter');
         closeStatus = true
       } else if (swordcount == 2){
-        if(girlTalked == true){
+        if(girlSaved == true){
           window.location.href = 'ending1.html';
         } else {
           window.location.href = 'ending0.html';
         }
-      }
-      else if (swordcount == 3){
-        window.location.href = 'ending2.html';
-      }
-      else if (swordcount == 4){
+      } else if (swordcount == 3){
+        if(girlSaved == true){
+          window.location.href = 'ending2.html';
+        } else {
+          window.location.href = 'ending0.html';
+        }
+      } else if (swordcount == 4){
         window.location.href = 'ending3.html';
       }
     } else if (toolshopstate10 == true && signopened == false){
@@ -229,7 +232,6 @@ window.onkeypress=function(e) {
     } else if (sword3status == true && sword3Got == false) {
       sword3Got = true
       swordcount = swordcount+1
-      $('body').prepend('<h1 class="fade-title">Get sword fragment no.3 /4</h1>')
       $('#sword-piece3').fadeIn(1);
       $('#sword3-card').addClass('fade-title');
       $('#sword3-container').css('display','grid');
@@ -239,7 +241,6 @@ window.onkeypress=function(e) {
       swordcount = swordcount+1;
       sword4Got = true
       $('#sword-piece4').fadeIn(1);
-      $('body').prepend('<h1 class="fade-title">Get sword fragment no.4 /4</h1>')
       $('#sword4-card').addClass('fade-title');
       $('#sword4-container').css('display','grid');
       $('#sword-f-4').appendTo('#trash');
@@ -257,6 +258,7 @@ window.onkeypress=function(e) {
   } else if (e.which == 109) {
     // mission
     if ($('#mission-card').css('display') == 'none') {
+      $('#open-m').css('color','white');
       $('.container').addClass('filter');
       $('#mission-card').css('display','flex')
     } else {
@@ -287,7 +289,7 @@ window.onkeypress=function(e) {
       console.log('we')
     } else if (intro3 == true && introdone == false){
       closeStatus = true;
-      setTimeout(function(){$('#instruction').css('display','block');$('#mission').css('display','block');$('#mission').removeClass('light2')},500)
+      setTimeout(function(){$('#instruction').css('display','block');},500)
       console.log('te')
       introdone = true;
       startGame = true
@@ -337,7 +339,6 @@ window.onkeypress=function(e) {
       $('#heart-container').css('display','grid');
       $('#bread-container').css('display','none');
       $('#fkey-2').appendTo($('#trash'));
-      $('body').prepend('<h1 id="bread-got" class="fade-title">Got bleeding heart</h1>')
       $('#heart-card').addClass('fade-title');
       $('#bear-box').attr('src','./images/bear2.png');
       $('#fox').fadeOut(1)
@@ -366,7 +367,6 @@ window.onkeypress=function(e) {
       $('#head-box').fadeOut(1);
       $('#fkey-3').appendTo($('#trash'))
       closeStatus = true;
-      $('body').prepend('<h1 id="tear-got" class="fade-title">Got girl"s tear</h1>')
       $('#potion-container').css('display','grid');
       $('#tear-card').addClass('fade-title');
       console.log('7')
@@ -391,7 +391,6 @@ window.onkeypress=function(e) {
           ladderGot = true;
           $('#ladder-container').css('display','grid');
           $('#fkey-4').appendTo($('#trash'))
-          $('body').prepend('<h1 class="fade-title">Got magic ladder</h1>')
           $('#ladder-card').addClass('fade-title');
         },500)
         $('.digit').css('color','yellow')
@@ -408,7 +407,6 @@ $('#potion-container').click(function(){
   $('#sword2-container').css('display','grid')
   $('#potion-container').css('display','none')
   $('body').prepend('<h1 id="sword2-got" class="fade-title">Ted drinks the liquid</h1>')
-  setTimeout(function(){ $('body').prepend('<h1 class="fade-title">Got sword fragment no.2 /4</h1>')},5000)
   sword2Got = true;
   $('#sword-piece2').fadeIn(1);
   swordcount = swordcount+1
@@ -494,6 +492,8 @@ setInterval(function(){
     $('#sword2-container').css('display','none');
     $('#sword3-container').css('display','none');
     $('#sword4-container').css('display','none');
+    $('#mission2').css('color','green');
+    $('#open-m').css('color','green');
   }
   if (toolshopstate8 == true){
     $('#tool-sign').css('display','flex')
