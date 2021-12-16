@@ -605,7 +605,7 @@ h1 {
 #gif {
   position: absolute;
   bottom: 0;
-  max-width: 100%;
+  width: 100%;
   display: none;
 }
 #blood1 {

@@ -199,7 +199,15 @@ window.onkeypress=function(e) {
         boyy = parseInt(box.css('top'),10);
         if(diffrence(boyx,posx)<= 40 && diffrence(boyy,posy) <= 80 && coffinOpen == true && $('#tool-shop-container').css('display') == 'block' && hardmode == true){
           gameOver = true;
-          $('#zombie-card').css('opacity','1');
+          $('#time-conv').css('display','flex');
+          $('.container').addClass('filter');
+          $('#dialog-text5').html("Angelina, I...")
+          $('#boy2').attr('src','./images/dead.png')
+          $('#boy2').css('width','7.5vw')
+          $('#speaking-img5').attr('src','./images/time2.png')
+          $('.container').delay(3000).fadeOut(1000)
+          setTimeout(function(){window.location.href = "ending0.html";},5000)
+          // $('#zombie-card').css('opacity','1');
         }
       },20)
     } else if (toolshopstate9 == true) {
@@ -244,7 +252,7 @@ window.onkeypress=function(e) {
       $('#sword4-card').addClass('fade-title');
       $('#sword4-container').css('display','grid');
       $('#sword-f-4').appendTo('#trash');
-      $('#sword4').appendTo('#trash');
+      $('#accidant').attr('src','./images/accidant.png')
     }
   } else if (e.which == 113) {
     // bag

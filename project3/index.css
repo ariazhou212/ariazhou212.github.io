@@ -184,6 +184,7 @@ a {
   padding: 0 2vw;
   display: none;
   flex-direction: column;
+  gap: 1vw;
 }
 .obtained {
   width: 30vw;
@@ -194,8 +195,8 @@ a {
   transform: translate(-50%, -50%);
   color: white;
   background-color: rgb(88, 46, 17);
-  padding: 0 2vw;
   display: flex;
+  padding: 1vw;
   flex-direction: column;
   opacity: 0;
 }
