@@ -184,7 +184,7 @@ a {
   padding: 0 2vw;
   display: none;
   flex-direction: column;
-  gap: 1vw;
+  gap: 1vh;
 }
 .obtained {
   width: 30vw;
